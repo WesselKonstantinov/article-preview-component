@@ -78,6 +78,7 @@ select {
 
 /* || Custom properties */
 :root {
+  --color-white: hsl(0 0% 100%);
   --color-dark-blue: hsl(214 17% 51%);
   --color-light-grayish-blue: hsl(210 46% 95%);
   --color-grayish-blue: hsl(212 23% 69%);
@@ -93,7 +94,7 @@ select {
 /* || Global styles */
 body {
   display: grid;
-  place-content: grid;
+  place-content: center;
   background-color: var(--color-light-grayish-blue);
   color: var(--color-dark-blue);
   font-family: var(--font-family-primary);
@@ -111,4 +112,36 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+/* || Article preview card component styles */
+.card {
+  margin: 1.5rem;
+  max-width: 20.4375rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  background-color: var(--color-white);
+  box-shadow: 0 2.5rem 2.5rem -0.625rem hsl(210 29% 84% / 0.5);
+}
+
+.card__body {
+  padding: 2.25rem 2rem 1.25rem;
+}
+
+.card__title {
+  color: var(--color-dark-grayish-blue);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.0125em;
+}
+
+.card__description {
+  letter-spacing: 0.009375em;
+  margin-top: 0.75rem;
+}
+
+.card__footer {
+  margin-top: 2rem;
 }
