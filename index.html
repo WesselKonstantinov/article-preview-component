@@ -1,36 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Article preview component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
-
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
-
-  Michelle Appleton
-  28 Jun 2020
-
-  Share
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Article preview component</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1 class="sr-only">Article preview card component</h1>
+      <div class="card">
+        <img
+          src="./images/drawers.jpg"
+          width="660"
+          height="528"
+          alt="A dark green chest of drawers with three items on top of it: a decorative vase of wheat, a small picture frame that says 'love will keep us alive' and a painting."
+          class="card__image"
+        />
+        <div class="card__body">
+          <h2 class="card__title">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h2>
+          <p class="card__description">
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+          <div class="card__footer">
+            <img
+              src="./images/avatar-michelle.jpg"
+              width="175"
+              height="175"
+              alt="Michelle Appleton"
+              class="card__avatar"
+            />
+            <div class="card__profile">
+              <h3 class="card__profile-name">Michelle Appleton</h3>
+              <time datetime="2020-06-28" class="card__profile-date"
+                >28 Jun 2020</time
+              >
+            </div>
+            <button
+              class="card__share-button"
+              aria-label="Open share options"
+              aria-expanded="false"
+              aria-controls="card-share-section"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                focusable="false"
+                width="15"
+                height="13"
+              >
+                <path
+                  fill="#6E8098"
+                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="card__share-section" id="card-share-section">
+            <p class="card__share-ribbon">Share</p>
+            <div class="card__share-options">
+              <a
+                href="/"
+                class="card__share-link"
+                aria-label="Facebook (opens in a new tab)"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  src="./images/icon-facebook.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                  class="card__share-icon"
+                />
+              </a>
+              <a
+                href="/"
+                class="card__share-link"
+                aria-label="Twitter (opens in a new tab)"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  src="./images/icon-twitter.svg"
+                  alt=""
+                  width="20"
+                  height="17"
+                  class="card__share-icon"
+                />
+              </a>
+              <a
+                href="/"
+                class="card__share-link"
+                aria-label="Pinterest (opens in a new tab)"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img
+                  src="./images/icon-pinterest.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                  class="card__share-icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
