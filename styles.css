@@ -100,6 +100,7 @@ body {
   font-family: var(--font-family-primary);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
+  letter-spacing: 0.009375em;
 }
 
 .sr-only {
@@ -138,10 +139,44 @@ body {
 }
 
 .card__description {
-  letter-spacing: 0.009375em;
   margin-top: 0.75rem;
 }
 
 .card__footer {
   margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card__avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.card__share-button {
+  margin-left: auto;
+}
+
+.card__profile-name {
+  font-size: inherit;
+  color: var(--color-dark-grayish-blue);
+}
+
+.card__profile-date {
+  color: var(--color-grayish-blue);
+}
+
+.card__share-button {
+  width: 2rem;
+  height: 2rem;
+  padding: 0.5625rem 0.5rem 0.625rem 0.5625rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-light-grayish-blue);
+  cursor: pointer;
 }
