@@ -127,6 +127,15 @@ body {
   box-shadow: 0 2.5rem 2.5rem -0.625rem hsl(210 29% 84% / 0.5);
 }
 
+.card__image-container {
+  height: 12.5rem;
+}
+
+.card__image {
+  height: 100%;
+  object-fit: cover;
+}
+
 .card__body {
   padding: 2.25rem 2rem 1.25rem;
 }
@@ -143,6 +152,7 @@ body {
 }
 
 .card__footer {
+  position: relative;
   margin-top: 2rem;
   display: flex;
   align-items: center;
@@ -179,4 +189,13 @@ body {
   border-radius: 50%;
   background-color: var(--color-light-grayish-blue);
   cursor: pointer;
+}
+
+.card__share-section {
+  position: absolute;
+  visibility: visible;
+}
+
+[aria-expanded="false"] + .card__share-section {
+  visibility: hidden;
 }
