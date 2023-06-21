@@ -118,7 +118,7 @@ body {
 /* || Article preview card component styles */
 .card {
   margin: 1.5rem;
-  max-width: 20.4375rem;
+  max-width: 25rem;
   display: flex;
   flex-direction: column;
   border-radius: 0.625rem;
@@ -195,6 +195,11 @@ body {
   cursor: pointer;
 }
 
+.card__share-button:focus-visible {
+  outline: 0.3rem solid var(--color-dark-blue);
+  outline-offset: 0.3rem;
+}
+
 [aria-expanded="true"] {
   top: 0.625rem;
   background-color: var(--color-dark-blue);
@@ -241,6 +246,11 @@ body {
   gap: 0.75rem;
 }
 
+.card__share-link:focus-visible {
+  outline: 0.3rem solid var(--color-white);
+  outline-offset: 0.3rem;
+}
+
 .card__share-icon {
   width: 1.25rem;
   height: 1.25rem;
@@ -259,6 +269,10 @@ body {
   .card__image-container {
     height: initial;
     flex: 1 0 17.8125rem;
+  }
+
+  .card__image {
+    object-position: left;
   }
 
   .card__body {
@@ -295,11 +309,11 @@ body {
   .card__share-section::after {
     content: "";
     position: absolute;
-    border: 0.75rem solid;
-    border-color: var(--color-dark-grayish-blue) transparent transparent;
     left: 50%;
     top: 120%;
     transform: translate(-50%, -50%);
+    border: 0.75rem solid;
+    border-color: var(--color-dark-grayish-blue) transparent transparent;
   }
 
   .card__share-options {
