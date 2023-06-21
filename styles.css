@@ -227,7 +227,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.95rem;
-  transition: opacity 0.1s linear, visibility 0.1s linear;
+  transition: opacity 0.15s linear, visibility 0.15s linear;
 }
 
 [aria-expanded="false"] + .card__share-section {
