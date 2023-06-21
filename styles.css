@@ -36,7 +36,7 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: 1.54;
 }
 
 /* A elements that don't have a class get default styles */
@@ -145,6 +145,7 @@ body {
   color: var(--color-dark-grayish-blue);
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
+  line-height: 1.5;
   letter-spacing: 0.0125em;
 }
 
@@ -243,4 +244,65 @@ body {
 .card__share-icon {
   width: 1.25rem;
   height: 1.25rem;
+}
+
+@media (min-width: 56.25rem) {
+  .main-content {
+    position: relative;
+  }
+
+  .card {
+    max-width: 45.625rem;
+    flex-direction: row;
+  }
+
+  .card__image-container {
+    height: initial;
+    flex: 1 0 17.8125rem;
+  }
+
+  .card__body {
+    padding: 2rem 2.5rem;
+    flex: 1 0 27.8125rem;
+  }
+
+  .card__title {
+    font-size: var(--font-size-2xl);
+    line-height: 1.4;
+  }
+
+  .card__footer {
+    margin-top: 1.25rem;
+    position: static;
+  }
+
+  .card__share-button {
+    position: static;
+  }
+
+  .card__share-section {
+    margin: 0;
+    padding: 1.125rem 2.25rem;
+    gap: 1.3125rem;
+    left: initial;
+    top: initial;
+    bottom: 7.5rem;
+    right: -3rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.625rem 0.625rem 0 hsl(210 29% 84% / 0.5);
+  }
+
+  .card__share-section::after {
+    content: "";
+    position: absolute;
+    border: 0.75rem solid;
+    border-color: var(--color-dark-grayish-blue) transparent transparent;
+    left: 50%;
+    top: 120%;
+    transform: translate(-50%, -50%);
+  }
+
+  .card__share-options {
+    gap: 1rem;
+  }
 }
